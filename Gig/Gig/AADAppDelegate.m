@@ -6,12 +6,22 @@
 //  Copyright (c) 2013 desalu.adewale. All rights reserved.
 //
 
+// Import Parse SDK
+#import <Parse/Parse.h>
 #import "AADAppDelegate.h"
 
 @implementation AADAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    /** Parse Keys *****************************************************/
+     
+    [Parse setApplicationId:@"nvn3vCCt6oLeAHkCofzZ48XXYz0SbzSqvFGgXm2y"
+                  clientKey:@"Tfik0m0oUfr6FxQZn6i8JdBC1JgR45yXkjmImbnb"];
+    
+    /*******************************************************************/
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -41,6 +51,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    [PFUser logOut];
 }
 
 @end

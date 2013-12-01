@@ -6,8 +6,10 @@
 //  Copyright (c) 2013 desalu.adewale. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 
-@interface AADViewController : UIViewController
+@interface AADViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+
 
 @end
