@@ -62,6 +62,21 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
     
     self.navigationItem.rightBarButtonItem = logoutButton;
     
+    
+    //Parse woowoo
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Services"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded. The first 100 objects are available in objects
+            NSLog(@"---");
+           
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
 }
 
 

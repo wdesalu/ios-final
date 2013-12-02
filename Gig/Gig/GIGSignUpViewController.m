@@ -48,6 +48,7 @@ UIImageView *fieldsBackground;
     [self.signUpView.usernameField setTextColor:[UIColor colorWithRed:44.0f/255.0f green:62.0f/255.0f blue:80.0f/255.0f alpha:1.0]];
     [self.signUpView.passwordField setTextColor:[UIColor colorWithRed:44.0f/255.0f green:62.0f/255.0f blue:80.0f/255.0f alpha:1.0]];
     [self.signUpView.emailField setTextColor:[UIColor colorWithRed:44.0f/255.0f green:62.0f/255.0f blue:80.0f/255.0f alpha:1.0]];
+    
 }
 
 - (void)viewDidLayoutSubviews {
