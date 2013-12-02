@@ -10,6 +10,7 @@
 #import "GIGLogInViewController.h"
 #import "GIGSignUpViewController.h"
 
+
 static const CGFloat kHPTButtonHeight = 44.0;
 static const CGFloat kHPTButtonMargin = 20.0;
 static const CGFloat kHPTButtonBottomOffset = 35.0;

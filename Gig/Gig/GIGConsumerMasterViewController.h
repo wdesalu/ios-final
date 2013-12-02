@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 singh.rishabhalaap. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
 
 @interface GIGConsumerMasterViewController : UITableViewController
