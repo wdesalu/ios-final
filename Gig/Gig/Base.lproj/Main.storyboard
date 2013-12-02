@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-177" y="0.0"/>
         </scene>
-        <!--View Controller - Service Home-->
+        <!--View Controller - Home-->
         <scene sceneID="wZx-Qa-lVv">
             <objects>
                 <viewController id="O74-DR-pEC" sceneMemberID="viewController">
@@ -66,7 +66,7 @@
                         <barButtonItem id="qbu-K5-o9N"/>
                         <barButtonItem id="jUT-mE-DxE"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Service Home" id="7pQ-8T-jkM"/>
+                    <navigationItem key="navigationItem" title="Home" id="7pQ-8T-jkM"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXl-07-eA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,13 +85,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Done, Thank You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfj-Ck-Mz5">
-                                <rect key="frame" x="113" y="183" width="131" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GiG Submitted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8u-B9-0Aw">
+                                <rect key="frame" x="85" y="126" width="151" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="We have received your information. Good luck at getting a GiG!" translatesAutoresizingMaskIntoConstraints="NO" id="4G4-9s-pPX">
+                                <rect key="frame" x="40" y="258" width="240" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -101,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="1731" y="405"/>
         </scene>
-        <!--Form View Controller - Form-->
+        <!--Form View Controller - New Form-->
         <scene sceneID="Pbo-ce-fOD">
             <objects>
                 <viewController id="Qyd-jA-nFV" customClass="GIGFormViewController" sceneMemberID="viewController">
@@ -146,7 +153,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="r-r-respek" translatesAutoresizingMaskIntoConstraints="NO" id="GbW-Jg-Ngc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GbW-Jg-Ngc">
                                 <rect key="frame" x="10" y="234" width="280" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -174,9 +181,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gu-fk-xEC">
-                                <rect key="frame" x="103" y="453" width="99" height="30"/>
+                                <rect key="frame" x="103" y="453" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="YOLO FOSHO">
+                                <state key="normal" title="Submit GiG">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -187,7 +194,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Form" id="DOX-43-5bi"/>
+                    <navigationItem key="navigationItem" title="New Form" id="DOX-43-5bi"/>
                     <connections>
                         <outlet property="descriptionField" destination="GbW-Jg-Ngc" id="7Uf-ka-ZmM"/>
                         <outlet property="rateField" destination="1Nn-C8-Tdg" id="JtM-wb-iBJ"/>
