@@ -73,10 +73,38 @@
             </objects>
             <point key="canvasLocation" x="833" y="405"/>
         </scene>
-        <!--View Controller - Form-->
+        <!--View Controller-->
+        <scene sceneID="vy6-tY-7hx">
+            <objects>
+                <viewController id="OJo-uy-hMV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kAT-eb-mVC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eae-Mw-Oau"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rg8-Si-eDW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Done, Thank You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfj-Ck-Mz5">
+                                <rect key="frame" x="113" y="183" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Avm-SE-Wwt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Plq-KJ-nqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1731" y="405"/>
+        </scene>
+        <!--Form View Controller - Form-->
         <scene sceneID="Pbo-ce-fOD">
             <objects>
-                <viewController id="Qyd-jA-nFV" sceneMemberID="viewController">
+                <viewController id="Qyd-jA-nFV" customClass="GIGFormViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xCC-Tl-HAZ"/>
                         <viewControllerLayoutGuide type="bottom" id="KFT-iB-p82"/>
@@ -151,11 +179,21 @@
                                 <state key="normal" title="YOLO FOSHO">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="Qyd-jA-nFV" eventType="touchUpInside" id="hNf-Eo-AOr"/>
+                                    <segue destination="OJo-uy-hMV" kind="push" id="kdc-YB-Sry"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Form" id="DOX-43-5bi"/>
+                    <connections>
+                        <outlet property="descriptionField" destination="GbW-Jg-Ngc" id="7Uf-ka-ZmM"/>
+                        <outlet property="rateField" destination="1Nn-C8-Tdg" id="JtM-wb-iBJ"/>
+                        <outlet property="subtitleField" destination="uui-Ta-wfZ" id="ZAI-vd-YdQ"/>
+                        <outlet property="titleField" destination="efk-BY-vYm" id="w03-cU-UCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIA-Gl-9oW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
