@@ -57,13 +57,13 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
          forCellReuseIdentifier:@"FormCell"];
 
 //    OLD ADD BUTTON
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    //self.navigationItem.rightBarButtonItem = addButton;
     
    
-    //UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logOutUser:)];
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logOutUser:)];
     
-    //self.navigationItem.rightBarButtonItem = logoutButton;
+    self.navigationItem.rightBarButtonItem = logoutButton;
     
     
     //Parse woowoo
@@ -150,6 +150,8 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
 - (void)logOutUser:(id)sender
 {
     NSLog(@"yolo");
+    [PFUser logOut];
+    [self viewDidAppear:YES];
 }
 
 #pragma mark - Table View

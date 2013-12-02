@@ -37,6 +37,8 @@
     self.fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"black.png"]];
     [self.logInView insertSubview:self.fieldsBackground atIndex:1];
 
+    //Add logo
+    [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logofull.png"]]];
     
     // Remove text shadow
     CALayer *layer = self.logInView.usernameField.layer;
@@ -55,7 +57,7 @@
     
     // Set frame for elements
     [self.logInView.dismissButton setFrame:CGRectMake(10.0f, 10.0f, 87.5f, 45.5f)];
-    [self.logInView.logo setFrame:CGRectMake(66.5f, 100.0f, 187.0f, 58.5f)];
+    [self.logInView.logo setFrame:CGRectMake(35.5f, 30.0f, 250.0f, 180.0f)];
     [self.logInView.facebookButton setFrame:CGRectMake(35.0f, 287.0f, 120.0f, 40.0f)];
     [self.logInView.twitterButton setFrame:CGRectMake(35.0f+130.0f, 287.0f, 120.0f, 40.0f)];
     [self.logInView.logInButton setFrame:CGRectMake(35.0f, 320.0f, 250.0f, 40.0f)];
