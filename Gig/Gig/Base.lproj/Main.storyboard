@@ -288,8 +288,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fuck You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5a-zO-YQC">
-                                <rect key="frame" x="116" y="139" width="71" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5a-zO-YQC">
+                                <rect key="frame" x="105" y="160" width="110" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -303,7 +303,7 @@
                             <constraint firstItem="tRx-j2-1UF" firstAttribute="leading" secondItem="H6Y-nq-3Sr" secondAttribute="leading" constant="20" symbolic="YES" id="bxa-Ir-Ipr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Service Description" id="lZe-M2-nWc"/>
+                    <navigationItem key="navigationItem" title="Description" id="lZe-M2-nWc"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="tRx-j2-1UF" id="jgl-Ww-Fek"/>
                     </connections>

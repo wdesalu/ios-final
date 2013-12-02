@@ -49,13 +49,18 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
-    //    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"GIGConsumerCell"];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"GIGConsumerCell" bundle:nil]
          forCellReuseIdentifier:@"FormCell"];
+
+//    OLD ADD BUTTON
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+   
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logOutUser:)];
+    
+    self.navigationItem.rightBarButtonItem = logoutButton;
     
 }
 
@@ -111,6 +116,8 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
     // Dispose of any resources that can be recreated.
 }
 
+
+//USE THIS METHOD TO ADD OBJECTS INTO MASTER
 - (void)insertNewObject:(id)sender
 {
     
@@ -130,6 +137,11 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+- (void)logOutUser:(id)sender
+{
+    NSLog(@"yolo");
+}
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -145,18 +157,6 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSLog(@"OMG");
-    
-    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GIGConsumerCell" forIndexPath:indexPath];
-    //
-    //    NSDate *object = _objects[indexPath.row];
-    //    cell.textLabel.text = [object description];
-    //    return cell;
-    
-    //    ---ATTEMPTING DEV.APPLE IMPL ---
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
@@ -164,6 +164,7 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
     }
     
 //    TODO: make everything dict-wise
+    
 //    NSDictionary *item = (NSDictionary *)[self.content objectAtIndex:indexPath.row];
 //    cell.textLabel.text = [item objectForKey:@"mainTitleKey"];
 //    cell.detailTextLabel.text = [item objectForKey:@"secondaryTitleKey"];
