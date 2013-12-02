@@ -26,6 +26,9 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
 @property (nonatomic, strong) UIButton *signupButton;
 @property (nonatomic, strong) UIView *darkOverlayView;
 
+//---Global Objects
+//@property (nonatomic, strong) NSArray *services;
+
 @end
 
 @implementation GIGConsumerMasterViewController
@@ -54,13 +57,13 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
          forCellReuseIdentifier:@"FormCell"];
 
 //    OLD ADD BUTTON
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    self.navigationItem.rightBarButtonItem = addButton;
     
    
-    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logOutUser:)];
+    //UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logOutUser:)];
     
-    self.navigationItem.rightBarButtonItem = logoutButton;
+    //self.navigationItem.rightBarButtonItem = logoutButton;
     
     
     //Parse woowoo
@@ -70,6 +73,7 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
         if (!error) {
             // The find succeeded. The first 100 objects are available in objects
             NSLog(@"---");
+            _objects =  [(NSArray*)objects mutableCopy];
            
         } else {
             // Log details of the failure
@@ -135,15 +139,6 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
 //USE THIS METHOD TO ADD OBJECTS INTO MASTER
 - (void)insertNewObject:(id)sender
 {
-    
-//    // Create a new PFObject to represent this To-Do item.
-//    PFObject *service = [PFObject objectWithClassName:@"Services"];
-//    [service setObject:@"Wale" forKey:@"ServiceTitle"];
-//    [service setObject:@"Escort" forKey:@"ServiceSubtitle"];
-//    [service setObject:@"Special ;)" forKey:@"ServiceDescription"];
-//    [service setObject:[PFUser currentUser] forKey:@"User"];
-//    [service save];
-    
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
@@ -186,6 +181,10 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
 //    NSString *path = [[NSBundle mainBundle] pathForResource:[item objectForKey:@"imageKey"] ofType:@"png"];
 //    UIImage *theImage = [UIImage imageWithContentsOfFile:path];
 //    cell.imageView.image = theImage;
+    
+    
+//    PFObject *temp = self.services[indexPath.row];
+    
     
     cell.textLabel.text = @"Cell_Title";
     cell.detailTextLabel.text = @"Cell_Subtitle";
