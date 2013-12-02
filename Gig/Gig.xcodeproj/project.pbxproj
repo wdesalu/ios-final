@@ -35,9 +35,9 @@
 		38D46F34184C24EB00445CC9 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D46F33184C24EB00445CC9 /* black.png */; };
 		38D46F37184C2E4100445CC9 /* GIGSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D46F36184C2E4100445CC9 /* GIGSignUpViewController.m */; };
 		38D46F3D184C508700445CC9 /* bench.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D46F3C184C508700445CC9 /* bench.png */; };
-		38D46F3F184C5DBC00445CC9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D46F3E184C5DBC00445CC9 /* Parse.framework */; };
 		D1004D12184C56AB00ED5AB1 /* GIGConsumerMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1004D11184C56AB00ED5AB1 /* GIGConsumerMasterViewController.m */; };
 		D1004D15184C56FF00ED5AB1 /* GIGConsumerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1004D14184C56FF00ED5AB1 /* GIGConsumerDetailViewController.m */; };
+		D1004D17184C621A00ED5AB1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1004D16184C621A00ED5AB1 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,11 +87,11 @@
 		38D46F35184C2E4100445CC9 /* GIGSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGSignUpViewController.h; sourceTree = "<group>"; };
 		38D46F36184C2E4100445CC9 /* GIGSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGSignUpViewController.m; sourceTree = "<group>"; };
 		38D46F3C184C508700445CC9 /* bench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bench.png; sourceTree = "<group>"; };
-		38D46F3E184C5DBC00445CC9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D1004D10184C56AB00ED5AB1 /* GIGConsumerMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGConsumerMasterViewController.h; sourceTree = "<group>"; };
 		D1004D11184C56AB00ED5AB1 /* GIGConsumerMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGConsumerMasterViewController.m; sourceTree = "<group>"; };
 		D1004D13184C56FF00ED5AB1 /* GIGConsumerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGConsumerDetailViewController.h; sourceTree = "<group>"; };
 		D1004D14184C56FF00ED5AB1 /* GIGConsumerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGConsumerDetailViewController.m; sourceTree = "<group>"; };
+		D1004D16184C621A00ED5AB1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 				38D46F0B184AAE5700445CC9 /* MobileCoreServices.framework in Frameworks */,
 				38D46F0C184AAE5700445CC9 /* QuartzCore.framework in Frameworks */,
 				38D46F0D184AAE5700445CC9 /* Security.framework in Frameworks */,
-				38D46F3F184C5DBC00445CC9 /* Parse.framework in Frameworks */,
+				D1004D17184C621A00ED5AB1 /* Parse.framework in Frameworks */,
 				38D46F0E184AAE5700445CC9 /* StoreKit.framework in Frameworks */,
 				38D46F0F184AAE5700445CC9 /* SystemConfiguration.framework in Frameworks */,
 				38D46EC8184A970700445CC9 /* CoreGraphics.framework in Frameworks */,
@@ -150,7 +150,7 @@
 		38D46EC4184A970700445CC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38D46F3E184C5DBC00445CC9 /* Parse.framework */,
+				D1004D16184C621A00ED5AB1 /* Parse.framework */,
 				38D46F00184AAE5600445CC9 /* CFNetwork.framework */,
 				38D46F01184AAE5700445CC9 /* CoreLocation.framework */,
 				38D46F02184AAE5700445CC9 /* libz.1.1.3.dylib */,
@@ -460,6 +460,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Wale/Documents/Projects/IOS\\ Dev/ios-final/Gig",
+					"/Users/rishabhalaapsingh/Desktop/98-222/ios-final/Gig",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gig/Gig-Prefix.pch";
@@ -477,6 +478,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Wale/Documents/Projects/IOS\\ Dev/ios-final/Gig",
+					"/Users/rishabhalaapsingh/Desktop/98-222/ios-final/Gig",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gig/Gig-Prefix.pch";

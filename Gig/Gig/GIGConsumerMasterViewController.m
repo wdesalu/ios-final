@@ -147,19 +147,26 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
     
     //    ---ATTEMPTING DEV.APPLE IMPL ---
     
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
+//    TODO: make everything dict-wise
 //    NSDictionary *item = (NSDictionary *)[self.content objectAtIndex:indexPath.row];
 //    cell.textLabel.text = [item objectForKey:@"mainTitleKey"];
 //    cell.detailTextLabel.text = [item objectForKey:@"secondaryTitleKey"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:[item objectForKey:@"imageKey"] ofType:@"png"];
 //    UIImage *theImage = [UIImage imageWithContentsOfFile:path];
 //    cell.imageView.image = theImage;
-//    return cell;
-    return nil;
+    
+    cell.textLabel.text = @"Cell_Title";
+    cell.detailTextLabel.text = @"Cell_Subtitle";
+    UIImage *theImage = [UIImage imageNamed:@"bench.png"];
+    cell.imageView.image = theImage;
+    
+    return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
