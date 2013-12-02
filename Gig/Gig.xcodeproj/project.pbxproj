@@ -31,6 +31,11 @@
 		38D46F0D184AAE5700445CC9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D46F05184AAE5700445CC9 /* Security.framework */; };
 		38D46F0E184AAE5700445CC9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D46F06184AAE5700445CC9 /* StoreKit.framework */; };
 		38D46F0F184AAE5700445CC9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D46F07184AAE5700445CC9 /* SystemConfiguration.framework */; };
+		38D46F29184C118D00445CC9 /* bench.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D46F28184C118D00445CC9 /* bench.png */; };
+		38D46F2F184C1B9700445CC9 /* HPTButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D46F2E184C1B9700445CC9 /* HPTButtonFactory.m */; };
+		38D46F32184C1E2100445CC9 /* GIGLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D46F31184C1E2100445CC9 /* GIGLogInViewController.m */; };
+		38D46F34184C24EB00445CC9 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D46F33184C24EB00445CC9 /* black.png */; };
+		38D46F37184C2E4100445CC9 /* GIGSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D46F36184C2E4100445CC9 /* GIGSignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,14 @@
 		38D46F05184AAE5700445CC9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		38D46F06184AAE5700445CC9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		38D46F07184AAE5700445CC9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		38D46F28184C118D00445CC9 /* bench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bench.png; path = "../../../Notes/User Interfaces/Hipstr/Hipstr/bench.png"; sourceTree = "<group>"; };
+		38D46F2D184C1B9700445CC9 /* HPTButtonFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTButtonFactory.h; sourceTree = "<group>"; };
+		38D46F2E184C1B9700445CC9 /* HPTButtonFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTButtonFactory.m; sourceTree = "<group>"; };
+		38D46F30184C1E2100445CC9 /* GIGLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGLogInViewController.h; sourceTree = "<group>"; };
+		38D46F31184C1E2100445CC9 /* GIGLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGLogInViewController.m; sourceTree = "<group>"; };
+		38D46F33184C24EB00445CC9 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
+		38D46F35184C2E4100445CC9 /* GIGSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGSignUpViewController.h; sourceTree = "<group>"; };
+		38D46F36184C2E4100445CC9 /* GIGSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGSignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,10 +167,16 @@
 			children = (
 				38D46ED4184A970700445CC9 /* AADAppDelegate.h */,
 				38D46ED5184A970700445CC9 /* AADAppDelegate.m */,
+				38D46F2D184C1B9700445CC9 /* HPTButtonFactory.h */,
+				38D46F2E184C1B9700445CC9 /* HPTButtonFactory.m */,
 				38D46ED7184A970700445CC9 /* Main.storyboard */,
 				38D46EDA184A970700445CC9 /* AADViewController.h */,
 				38D46EDB184A970700445CC9 /* AADViewController.m */,
 				38D46EDD184A970700445CC9 /* Images.xcassets */,
+				38D46F30184C1E2100445CC9 /* GIGLogInViewController.h */,
+				38D46F31184C1E2100445CC9 /* GIGLogInViewController.m */,
+				38D46F35184C2E4100445CC9 /* GIGSignUpViewController.h */,
+				38D46F36184C2E4100445CC9 /* GIGSignUpViewController.m */,
 				38D46ECC184A970700445CC9 /* Supporting Files */,
 			);
 			path = Gig;
@@ -166,10 +185,12 @@
 		38D46ECC184A970700445CC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				38D46F33184C24EB00445CC9 /* black.png */,
 				38D46ECD184A970700445CC9 /* Gig-Info.plist */,
 				38D46ECE184A970700445CC9 /* InfoPlist.strings */,
 				38D46ED1184A970700445CC9 /* main.m */,
 				38D46ED3184A970700445CC9 /* Gig-Prefix.pch */,
+				38D46F28184C118D00445CC9 /* bench.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -269,9 +290,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D46F29184C118D00445CC9 /* bench.png in Resources */,
 				38D46EDE184A970700445CC9 /* Images.xcassets in Resources */,
 				38D46ED0184A970700445CC9 /* InfoPlist.strings in Resources */,
 				38D46ED9184A970700445CC9 /* Main.storyboard in Resources */,
+				38D46F34184C24EB00445CC9 /* black.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,8 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D46F2F184C1B9700445CC9 /* HPTButtonFactory.m in Sources */,
 				38D46ED2184A970700445CC9 /* main.m in Sources */,
+				38D46F32184C1E2100445CC9 /* GIGLogInViewController.m in Sources */,
 				38D46ED6184A970700445CC9 /* AADAppDelegate.m in Sources */,
+				38D46F37184C2E4100445CC9 /* GIGSignUpViewController.m in Sources */,
 				38D46EDC184A970700445CC9 /* AADViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

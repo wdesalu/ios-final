@@ -7,43 +7,83 @@
 //
 
 #import "AADViewController.h"
+#import "GIGLogInViewController.h"
+#import "GIGSignUpViewController.h"
+
+static const CGFloat kHPTButtonHeight = 44.0;
+static const CGFloat kHPTButtonMargin = 20.0;
+static const CGFloat kHPTButtonBottomOffset = 35.0;
+static const CGFloat kHPTLabelTopOffset = 100.0;
 
 @interface AADViewController ()
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIButton *loginButton;
+@property (nonatomic, strong) UIButton *signupButton;
+@property (nonatomic, strong) UIView *darkOverlayView;
 
 @end
 
 @implementation AADViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 #pragma View life cycle
-/*
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
- 
- */
+    
+}
 
 // Login Page
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewDidAppear:YES];
     
     if (![PFUser currentUser]) { // No user logged in
-        // Create the log in view controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-        [logInViewController setDelegate:self]; // Set ourselves as the delegate
         
-        // Create the sign up view controller
-        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
-        [signUpViewController setDelegate:self]; // Set ourselves as the delegate
+        // Instantiate our custom log in view controller
+        GIGLogInViewController *logInViewController = [[GIGLogInViewController alloc] init];
+        [logInViewController setDelegate:self];
+        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", nil]];
+        [logInViewController setFields:PFLogInFieldsUsernameAndPassword
+         | PFLogInFieldsLogInButton
+         | PFLogInFieldsSignUpButton
+         | PFLogInFieldsDismissButton];
         
-        // Assign our sign up controller to be displayed from the login controller
+        // Instantiate our custom sign up view controller
+        GIGSignUpViewController *signUpViewController = [[GIGSignUpViewController alloc] init];
+        [signUpViewController setDelegate:self];
+        [signUpViewController setFields:PFSignUpFieldsDefault];
+        
+        // Link the sign up view controller
         [logInViewController setSignUpController:signUpViewController];
         
-        // Present the log in view controller
+        // Present log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
+        
+//        // Create the log in view controller
+//        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+//        [logInViewController setDelegate:self]; // Set ourselves as the delegate
+//        
+//        // Create the sign up view controller
+//        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+//        [signUpViewController setDelegate:self]; // Set ourselves as the delegate
+//        
+//        // Assign our sign up controller to be displayed from the login controller
+//        [logInViewController setSignUpController:signUpViewController];
+//        
+//        // Present the log in view controller
+//        [self presentViewController:logInViewController animated:YES completion:NULL];
     }
 }
 
