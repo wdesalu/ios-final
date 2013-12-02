@@ -56,6 +56,7 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
 }
 
 
@@ -112,6 +113,15 @@ static const CGFloat kHPTLabelTopOffset = 100.0;
 
 - (void)insertNewObject:(id)sender
 {
+    
+    // Create a new PFObject to represent this To-Do item.
+    PFObject *service = [PFObject objectWithClassName:@"Services"];
+    [service setObject:@"Wale" forKey:@"ServiceTitle"];
+    [service setObject:@"Escort" forKey:@"ServiceSubtitle"];
+    [service setObject:@"Special ;)" forKey:@"ServiceDescription"];
+    [service setObject:[PFUser currentUser] forKey:@"User"];
+    [service save];
+    
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
